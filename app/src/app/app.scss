@@ -1,0 +1,65 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+
+ion-app.ios {
+  font-family: 'Product Sans' !important;
+}
+.bar-button-default-ios,.bar-button-default-ios:hover:not(.disable-hover){
+  color:#ffffff;
+}
+.radio-ios .radio-icon{
+  border-radius: 50%;
+  position: relative;
+  width: 21px;
+  height: 21px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #c8c7cc;
+  background-color: #fff;
+}
+.radio-ios .radio-icon.radio-checked{
+  border-color: #6B70ED;
+  background-color: #6B70ED;
+}
+.radio-ios .radio-checked .radio-inner {
+  left: 7px;
+  top: 4px;
+  position: absolute;
+  width: 4px;
+  height: 9px;
+  border-width: 1px;
+  border-top-width: 0;
+  border-left-width: 0;
+  border-style: solid;
+  border-color: #fff;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.boldbutton{
+  font-weight:700;
+  letter-spacing:1px;
+  font-size:14px;
+  box-shadow:0 1px 20px 0px rgba(0,0,0, 0.3) ;
+  -webkit-box-shadow:0 1px 20px 0px rgba(0, 0,0, 0.3);
+  border-radius:5px !important;
+}
+.round-shadow{
+  box-shadow:0 1px 20px 0px rgba(0,0,0, 0.3) ;
+  -webkit-box-shadow:0 1px 20px 0px rgba(0, 0,0, 0.3);
+  border-radius:5px !important;
+}

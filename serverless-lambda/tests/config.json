@@ -1,0 +1,41 @@
+{
+  "package": [
+    {
+      "id": 1,
+      "bonus": 2000,
+      "price": 2000
+    },
+    {
+      "id": 2,
+      "bonus": 1000,
+      "price": 1000
+    },
+    {
+      "id": 3,
+      "bonus": 500,
+      "price": 500
+    },
+    {
+      "id": 4,
+      "bonus": 0,
+      "price": 100
+    }
+  ],
+  "bank": [
+    {
+      "id": 1,
+      "code": "hdfc",
+      "name": "HDFC Bank"
+    },
+    {
+      "id": 2,
+      "code": "axis",
+      "name": "AXIS Bank"
+    },
+    {
+      "id": 3,
+      "code": "sbi",
+      "name": "SBI Bank"
+    }
+  ]
+}

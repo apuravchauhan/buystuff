@@ -1,0 +1,95 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+      <button menuToggle ion-button icon-only style="color:white">
+        <ion-icon name="ios-menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Buy Stuff</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+
+  <div class="wallet-back">
+    <div class="wallet-value">
+      <small>INR</small>
+      {{packagePrice()}}
+    </div>
+    
+    <div class="payment-options">
+      <ion-segment [(ngModel)]="walletAction">
+        <ion-segment-button value="txns">
+          Credit Card
+          <hr/>
+        </ion-segment-button>
+        <ion-segment-button value="transfer">
+          Debit Card
+          <hr/>
+        </ion-segment-button>
+        <ion-segment-button value="netbank">
+          Net Banking
+          <hr/>
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+  </div>
+
+  <div class="payment-details">
+    <div [ngSwitch]="true">
+      <ion-card class="round-shadow" *ngSwitchCase="walletAction==='netbank'">
+        <ion-list no-lines radio-group [(ngModel)]="selectedBank">
+          <ion-item  *ngFor="let bank of banks">
+            <ion-avatar class="bank {{bank.code}}"  item-start>
+            </ion-avatar>
+            <ion-label stacked>
+              {{bank.name}}
+            </ion-label>
+            <ion-radio [value]="bank"></ion-radio>
+          </ion-item>
+        </ion-list>
+        <hr>
+          <div padding>
+              <button class="boldbutton" [disabled]="!selectedBank" ion-button block (click)="success()">Checkout</button>
+            </div>
+      </ion-card>
+      <ion-card class="round-shadow" *ngSwitchCase="walletAction==='txns'|| walletAction==='transfer'">
+        <form [formGroup]="ccForm">
+          <ion-list no-lines>
+            <ion-item [class.invalid]="!ccForm.controls.name.valid">
+              <ion-label>Name</ion-label>
+              <ion-input formControlName="name" type="text" text-right placeholder="Full name"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label>Card Number</ion-label>
+              <ion-input formControlName="num" type="number" text-right placeholder="4567XXXXXXXXXXXX"></ion-input>
+            </ion-item>
+            <ion-row>
+              <ion-col col-7>
+                <ion-item>
+                  <ion-label>Expiry</ion-label>
+                  <ion-datetime placeholder="MM/YY" displayFormat="MM/YY" pickerFormat="MM YYYY" min="2018-03" max="2028-12-31"></ion-datetime>
+                </ion-item>
+              </ion-col>
+              <ion-col>
+                <ion-item>
+                  <ion-label>CVV</ion-label>
+                  <ion-input formControlName="cvv" type="number" text-right placeholder="XXXX"></ion-input>
+                </ion-item>
+              </ion-col>
+
+            </ion-row>
+          </ion-list>
+          <hr>
+          <p padding-right style="color: red" text-right *ngIf="!ccForm.valid && submitted">
+              *Check info
+          </p>
+          <div style="padding:12px">
+              <button class="boldbutton" ion-button block (click)="pay()">Checkout</button>
+            </div>
+        </form>
+        
+      </ion-card>
+    </div>
+
+  </div>
+</ion-content>

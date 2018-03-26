@@ -1,0 +1,24 @@
+page-country {
+
+  .has-refresher > .scroll-content {
+    border-top: 0;
+  }
+  .footer-ios .toolbar-background-ios,
+  .header-ios .toolbar-background-ios {
+    border-color: transparent;
+    background: color($colors, primary) ;
+;
+  }
+  .toolbar-title-ios {
+    color: #ffffff;
+    letter-spacing: 1px;
+  }
+  .pollution-back {
+  background-image: url('../assets/imgs/bg13.png');
+  background-repeat: no-repeat;
+  }
+.toolbar .searchbar-ios .searchbar-input{
+  background: #ffffff;
+}
+
+}

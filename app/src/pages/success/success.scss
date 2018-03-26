@@ -1,0 +1,40 @@
+page-success {
+  .has-refresher > .scroll-content {
+    border-top: 0;
+  }
+  .footer-ios .toolbar-background-ios,
+  .header-ios .toolbar-background-ios {
+    border-color: transparent;
+    background: transparent;
+  }
+  .toolbar-title-ios {
+    color: color($colors, primary) !important;
+    letter-spacing: 1px;
+  }
+  .bar-button-default-ios {
+    color: color($colors, primary) !important;
+
+}
+.item-ios.item-block .item-inner,.list-ios > .item-block:first-child{
+  border-bottom: 0px;
+  border-top:0px;
+}
+
+.anim-move{
+  animation: move 4s linear infinite;
+}
+@keyframes move{
+  0%{
+    transform: translate3d(0,0,0);
+  }
+  25%{
+    transform: translate3d(0px,8px,0);
+  }
+  50%{
+    transform: translate3d(0px,8px,0);
+  }
+  100%{
+    transform: translate3d(0,0,0);
+  }
+}
+}

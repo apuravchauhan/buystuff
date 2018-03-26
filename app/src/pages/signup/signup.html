@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+      <button menuToggle ion-button icon-only style="color:blue">
+      </button>
+    </ion-buttons>
+    <ion-title>BUY STUFF</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+
+
+    <div class="anim-move logo-place" text-center>
+        <img src="assets/imgs/cards.png" style="width:120px;margin-bottom:30px">
+
+    </div>
+
+
+
+<ion-footer>
+
+    <ion-card class="round-shadow">
+      <ion-list no-lines>
+
+
+        <ion-item style="border-bottom:2px solid #F4F4F5" *ngIf="!signin">
+          <ion-icon name="ios-contact-outline" color="primary" item-left ></ion-icon>
+          <ion-label style="color:#808080;font-size:1.4rem;letter-spacing:0.5px">Name</ion-label>
+          <ion-input type="text" text-right [(ngModel)]="user.name"></ion-input>
+        </ion-item>
+
+        <ion-item style="border-bottom:2px solid #F4F4F5">
+          <ion-icon name="ios-mail-outline" color="primary" item-left ></ion-icon>
+
+          <ion-label  style="color:#808080;font-size:1.4rem;letter-spacing:0.5px">Email</ion-label>
+          <ion-input type="text" text-right [(ngModel)]="user.mail"></ion-input>
+        </ion-item>
+
+
+        <ion-item style="border-bottom:2px solid #F4F4F5" (click)="showfilter()" *ngIf="!signin">
+          <ion-icon name="ios-globe-outline" item-left color="primary"></ion-icon>
+
+          <ion-label style="color:#808080;font-size:1.4rem;letter-spacing:0.5px">Country</ion-label>
+          <ion-label style="min-height:20px" text-right>{{user.cntry.name}}</ion-label>
+        </ion-item>
+
+        <!-- <ion-item style="border-bottom:2px solid #F4F4F5" *ngIf="!signin">
+          <ion-icon name="ios-call-outline" item-left color="primary"></ion-icon>
+
+          <ion-label style="color:#808080;font-size:1.4rem;letter-spacing:0.5px">Mobile</ion-label>
+          <ion-input type="text" text-right placeholder="10 digit mobile num" [(ngModel)]="user.mob"></ion-input>
+
+        </ion-item> -->
+
+        <ion-item style="border-bottom:0px solid #F4F4F5">
+          <ion-icon name="ios-lock-outline" item-left color="primary"></ion-icon>
+
+          <ion-label  style="color:#808080;font-size:1.4rem;letter-spacing:0.5px">Password</ion-label>
+          <ion-input type="password" text-right [(ngModel)]="user.pass"></ion-input>
+
+        </ion-item>
+
+      </ion-list>
+
+    </ion-card>
+  <div style="padding:12px">
+    <button class="round-shadow" ion-button block (click)="sign()" style="font-weight:700;letter-spacing:1px">{{signin?'SIGN IN':'SIGN UP'}}</button>
+  </div>
+
+    <ion-item style="font-weight:600;font-size:1.2rem !important;letter-spacing:1px !important">
+      <ion-label item-left style="color:#808080;flex:2">TERMS</ion-label>
+      <ion-note item-end ><a href="javascript:void(0)" (click)="signin = (!signin)" style="color:#FF3366;text-decoration:none">{{!signin?'SIGN IN':'SIGN UP'}}</a></ion-note>
+    </ion-item>
+
+</ion-footer>
+</ion-content>

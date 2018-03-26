@@ -1,0 +1,111 @@
+page-wallet {
+  .scroll-content {
+    margin-top: 0 !important;
+  }
+  .has-refresher > .scroll-content {
+    border-top: 0;
+  }
+  .toolbar-title-ios {
+    color: #ffffff;
+    letter-spacing: 1px;
+  }
+  .footer-ios .toolbar-background-ios,
+  .header-ios .toolbar-background-ios {
+    border-color: transparent;
+    background: transparent;
+  }
+  .wallet-value {
+    font-size: 60px;
+    line-height: 70px;
+    letter-spacing: 1px;
+    small{
+      font-size:18px;
+      margin-right:-10px
+    }
+  }
+  @media (max-width: 355px) {
+    .wallet-value {
+      font-size: 40px;
+      line-height: 50px;
+      letter-spacing: 1px;
+    }
+  }
+ 
+  .wallet-back {
+    background-image: url('../assets/imgs/bg2.png'),linear-gradient(60deg,#050a14 0,#062456 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    text-align: center;
+    padding-top: 60px;
+    color: white;
+    position: relative;
+  }
+
+  .payment-details {
+    color: #000000;
+    height: 50%;
+    position: relative;
+  }
+
+  .payment-options {
+    position: absolute;
+    bottom: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 12px;
+    font-weight: 500;
+    color: #ffffff;
+
+  .segment-ios .segment-button {
+    border:0px;
+    color:#b0bef8;
+    height:4.2rem;
+    font-size:1.2rem;
+  }
+  .segment-ios .segment-button.segment-activated {
+    text-shadow:1px 0px 15px #ffffff;
+    background-color: transparent;
+    color:#ffffff;
+    hr{
+      box-shadow:1px 0px 10px 1px #ffffff;
+      margin-top:-1px;
+      width: 24px;
+      background: white;
+      height: 2px;
+      border-radius: 9px;
+    }
+  }
+  }
+  .item-ios {
+    letter-spacing: 0.06rem;
+    margin-bottom: 8px;
+    font-size: 1.4rem;
+    h3{
+      color:#2A2C3C;
+    }
+  } 
+  ion-item.ng-dirty.ng-invalid {
+    border-bottom: 2px solid #ea6153 !important;
+  }
+  .bank{
+    background: url("../assets/imgs/banks/bank.png");
+    background-size: cover;
+  }
+  .bank.axis{
+    background: url("../assets/imgs/banks/axis.png");
+    background-size: cover;
+  }
+  .bank.hdfc{
+    background: url("../assets/imgs/banks/hdfc.png");
+    background-size: cover;
+  }
+  .bank.sbi{
+    background: url("../assets/imgs/banks/sbi.png");
+    background-size: cover;
+  }
+}

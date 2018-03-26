@@ -1,0 +1,29 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        {{p.title}}
+      </button>
+    </ion-list>
+  </ion-content>
+  <ion-footer class="aqi-footer">
+      <ion-toolbar>
+        <ion-title padding>
+          <a href="https://twitter.com/apuravchauhan">@apuravchauhan</a></ion-title>
+        <ion-buttons end>
+          <a ion-button icon-only target="_blank" href="https://twitter.com/apuravchauhan">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-footer>
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
